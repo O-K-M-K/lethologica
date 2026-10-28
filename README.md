@@ -14,3 +14,18 @@ Basic Idea: Take a sentence and using some distance metric replace each word wit
 - CMUdict (to explore)
 - IPA converter (to explore)
 
+## Filters
+- Same number of syllables
+- Same first phoneme
+- Same last phoneme
+- Only important words (i.e., not 'it' 'and' 'or' 'I')
+- Same stress pattern
+- Closest match / random k-distance away
+
+## Lexical Filters
+- same affix
+
+
+# Implementation
+- Dictionary not big eough for a trie to be worth it atm
+
