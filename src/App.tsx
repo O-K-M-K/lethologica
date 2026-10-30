@@ -9,7 +9,9 @@ import {
   ComboboxItem,
   ComboboxList,
 } from "@/components/ui/combobox"
-import {distance} from 'fastest-levenshtein'
+import {closest} from 'fastest-levenshtein'
+import {useState} from 'react'
+import { byLength } from '@/lib/pseudowords'
 
 
 // - Levenshtein distance
@@ -19,10 +21,11 @@ import {distance} from 'fastest-levenshtein'
 
 function App() {
   const distances = ["Levenshtein", "Damerau-Levenshtein", "Jaccard Index", "Sorensen-Dice"]
+  const [userInput, setUserInput] = useState("Hello World!")
 
   return (
     <div className='flex flex-col p-5 gap-5'>
-      <Textarea placeholder='Type a sentence here.'></Textarea>
+      <Textarea placeholder='Type a sentence here...' value={userInput} onChange={(e) => setUserInput(e.target.value)}></Textarea>
         <Combobox items={distances}>
           <ComboboxInput placeholder="Select a distance metric">
             <ComboboxContent>
@@ -37,7 +40,7 @@ function App() {
             </ComboboxContent>
           </ComboboxInput>
         </Combobox>
-      <Button>Calculate</Button>
+      <Button onClick={()=>{console.log(userInput)}}>Calculate</Button>
     </div>
   )
 }

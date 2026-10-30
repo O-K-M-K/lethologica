@@ -13,6 +13,7 @@ Basic Idea: Take a sentence and using some distance metric replace each word wit
 ## Phonological (to explore)
 - CMUdict (to explore)
 - IPA converter (to explore)
+use IPA to convert then distance metric on CMUdict but need to specify alphabet to run over
 
 ## Filters
 - Same number of syllables
@@ -29,3 +30,7 @@ Basic Idea: Take a sentence and using some distance metric replace each word wit
 # Implementation
 - Dictionary not big eough for a trie to be worth it atm
 
+
+
+# NEXT:
+You have the distances.ts file and now just wire up putting the words through and calling the functions from app.tsx
