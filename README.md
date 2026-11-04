@@ -34,3 +34,25 @@ use IPA to convert then distance metric on CMUdict but need to specify alphabet 
 
 # NEXT:
 You have the distances.ts file and now just wire up putting the words through and calling the functions from app.tsx
+
+
+# Filter categories
+1. Which tokens get replaced at all (predicate on the input word)
+- Only important words (not 'it'/'and'/'or'/'I')
+- your existing length range
+
+2. Which metric measures distance (one choice)
+- orthographic: Levenshtein / Damerau / Jaccard / Sørensen-Dice
+- phonological: IPA->CMUdict distance
+
+3. Which candidates survive (predicates on each candidate, AND-ed together)
+- Same number of syllables
+- Same first phoneme
+- Same last phoneme
+- Same stress pattern
+
+4. How you pick the best word (one strategy)
+- Closest match / random k-distance away
+
+Which filters depend on eachother dictates implmenetation
+Need to map out how phoneme and stress patterns are calculated

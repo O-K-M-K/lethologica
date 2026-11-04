@@ -4,6 +4,10 @@ const files = import.meta.glob('../pseudowords/*.tsv',{
   eager: true, //load all now
 })
 
+
+/**
+ * Map of psudowords keyed by length
+ */
 export const byLength = new Map<number, string[]>()
 
 for (const [path, text] of Object.entries(files)) {
