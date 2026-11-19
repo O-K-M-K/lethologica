@@ -48,7 +48,7 @@ export function RangeFilter({ label, tooltip, min, max, value, onValueChange }: 
     <FilterRow label={label} tooltip={tooltip}>
       <span className="text-sm text-muted-foreground">{value.join(", ")}</span>
       <div className="w-1/2">
-        <Slider value={value} onValueChange={onValueChange} min={min} max={max} step={1} />
+        <Slider value={value} onValueChange={(v) => onValueChange(typeof v === "number" ? [v] : [...v])} min={min} max={max} step={1} />
       </div>
     </FilterRow>
   )

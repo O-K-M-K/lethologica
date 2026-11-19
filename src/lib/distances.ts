@@ -20,7 +20,7 @@ export function select(buckets: DistanceBuckets, selection: SelectionMode) : str
   if (selection.mode === 'closest'){
     const minKey = Math.min(...buckets.keys())
     const minMatch = buckets.get(minKey)
-    return minMatch[Math.floor(Math.random() * minMatch.length)]
+    return minMatch![Math.floor(Math.random() * minMatch!.length)]
 
   } else{
     // need to account for empty range
