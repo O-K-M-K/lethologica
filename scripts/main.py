@@ -10,9 +10,8 @@
 """
 
 from g2p_en import G2p 
-texts = ["Hello", "Hullo"]
+texts = ["world", "yorld", "hello"]
 g2p = G2p()
 for text in texts:
     out = g2p(text)
-    print("--------")
-    print(out)
+    print(out, text)

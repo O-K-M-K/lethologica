@@ -56,3 +56,17 @@ You have the distances.ts file and now just wire up putting the words through an
 
 Which filters depend on eachother dictates implmenetation
 Need to map out how phoneme and stress patterns are calculated
+
+
+# Personal notes.
+
+## IPA and CMU.
+IPA is international phonetic alphabet.
+CMU is CMU pronouncing dictionary.
+
+CMU takes the unicode symbols from IPA and uses a mapping from them 
+to 2 capital letter codes. For example æ becomes AE.
+
+
+Use [pronouncing-js](https://github.com/aparrish/pronouncingjs) for js and g2p for python.
+Alternative is cmu-pronouncing dict for simple. 
